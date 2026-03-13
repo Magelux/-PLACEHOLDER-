@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>KodAkademin - Din Programmeringsskola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <section id="login-section">
+            <h1>Välkommen tillbaka!</h1>
+            <input type="text" id="login-user" placeholder="Användarnamn">
+            <input type="password" id="login-pass" placeholder="Lösenord">
+            <button onclick="login()">Logga in</button>
+            <p>Inget konto? <a href="#" onclick="showSection('register-section')">Registrera dig här</a></p>
+        </section>
+
+        <section id="register-section" style="display:none;">
+            <h1>Skapa konto</h1>
+            <input type="text" id="reg-user" placeholder="Välj användarnamn">
+            <input type="password" id="reg-pass" placeholder="Välj lösenord">
+            <button onclick="register()">Bli medlem</button>
+            <p>Har du redan ett konto? <a href="#" onclick="showSection('login-section')">Logga in</a></p>
+        </section>
+
+        <section id="dashboard-section" style="display:none;">
+            <nav>
+                <span id="welcome-text"></span>
+                <button class="logout-btn" onclick="logout()">Logga ut</button>
+            </nav>
+            
+            <h1>Lektionsplan för nybörjare</h1>
+            <div class="grid">
+                <div class="card">
+                    <h3>HTML & CSS</h3>
+                    <p>Lär dig hur man bygger strukturen och stilen på en webbsida.</p>
+                    <button class="start-btn">Starta lektion</button>
+                </div>
+                <div class="card">
+                    <h3>JavaScript Basics</h3>
+                    <p>Gör dina sidor interaktiva med variabler, loopar och funktioner.</p>
+                    <button class="start-btn">Starta lektion</button>
+                </div>
+                <div class="card">
+                    <h3>Python för nybörjare</h3>
+                    <p>Lär dig ett av världens mest populära språk för data och AI.</p>
+                    <button class="start-btn">Starta lektion</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
